@@ -1,0 +1,7 @@
+<table class="table table-bordered">
+  <tr *ngFor='let eachDonar of reqList | filter: "handlingCharges": bgGrp'>
+    <td appShawdow>{{eachDonar.bloodGroup | uppercase}}</td>
+    <td>{{eachDonar.requiredDate | date: 'medium'}}</td>
+    <td>{{eachDonar.handlingCharges | currency: 'INR' : 'symbol' : '3.2-2'}}</td>
+  </tr>
+</table>
